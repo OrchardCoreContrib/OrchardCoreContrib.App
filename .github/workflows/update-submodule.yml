@@ -1,9 +1,8 @@
-name: Update Submodule
+name: Auto Update Submodule
 
 on:
   schedule:
     - cron: '* * * * *'
-  workflow_dispatch:
 
 jobs:
   build:
