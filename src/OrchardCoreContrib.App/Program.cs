@@ -2,4 +2,6 @@
 
 Console.WriteLine(Utils.Greet());
 
-Console.WriteLine(Utils.Greet("OrchardCoreContrib.App"));
+Console.WriteLine(Utils.Greet("Jon"));
+
+Console.WriteLine(Utils.Greet("Jon", "Doe"));
