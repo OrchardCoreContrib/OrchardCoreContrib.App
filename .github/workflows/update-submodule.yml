@@ -2,7 +2,8 @@ name: Auto Update Submodule
 
 on:
   schedule:
-    - cron: '*/30 * * * *'
+    - cron: '*/5 * * * *'
+      timezone: 'Asia/Riyadh'
   workflow_dispatch:
 
 jobs:
