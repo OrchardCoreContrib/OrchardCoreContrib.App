@@ -24,6 +24,6 @@ jobs:
     - name: Build Library
       run: dotnet build OrchardCoreContrib.Library --configuration Release
     - name: Build App
-      run: dotnet build OrchardCoreContrib.App --configuration Release --no-restore
+      run: dotnet build --configuration Release --no-restore
     - name: Test App
-      run: dotnet test OrchardCoreContrib.App --no-restore --verbosity normal
+      run: dotnet test --no-restore --verbosity normal
