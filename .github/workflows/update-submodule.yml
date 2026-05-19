@@ -1,0 +1,27 @@
+name: Update Submodule
+
+on:
+  schedule:
+    - cron: '*/1 * * * *'
+  workflow_dispatch:
+
+jobs:
+  build:
+    name: Build windows-latest
+    runs-on: windows-latest
+    steps:
+    - name: Checkout repository
+      uses: actions/checkout@v6
+      with:
+        submodules: recursive
+
+    - name: Update submodules to latest remote
+      run: |
+        git submodule update --remote --merge
+        git config user.name "github-actions[bot]"
+        git config user.email "github-actions[bot]@users.noreply.github.com"
+        git add .
+        git commit -m "chore: update submodules to latest" || echo "No changes to commit"
+
+    - name: Push changes
+      run: git push
