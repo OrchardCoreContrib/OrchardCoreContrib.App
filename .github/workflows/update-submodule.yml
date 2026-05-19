@@ -2,7 +2,7 @@ name: Auto Update Submodule
 
 on:
   schedule:
-    - cron: '* * * * *'
+    - cron: '*/5 * * * *'
 
 jobs:
   build:
