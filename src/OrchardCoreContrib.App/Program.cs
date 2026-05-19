@@ -1,1 +1,5 @@
-﻿Console.WriteLine("Hello, World!");
+﻿using OrchardCoreContrib.Library;
+
+Console.WriteLine(Utils.Greet());
+
+Console.WriteLine(Utils.Greet("OrchardCoreContrib.App"));
