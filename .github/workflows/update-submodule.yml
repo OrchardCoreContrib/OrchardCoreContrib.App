@@ -2,7 +2,8 @@ name: Auto Update Submodule
 
 on:
   schedule:
-    - cron: '*/5 * * * *'
+    - cron: '*/30 * * * *'
+  workflow_dispatch:
 
 jobs:
   build:
