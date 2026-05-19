@@ -1,4 +1,4 @@
-name: .NET Core Desktop
+name: Orchard Core Contrib App
 
 on:
   push:
