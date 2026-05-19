@@ -11,14 +11,19 @@ jobs:
     name: Build windows-latest
     runs-on: windows-latest
     steps:
-    - uses: actions/checkout@v6
+    - name: Checkout repository
+      uses: actions/checkout@v6
+      with:
+        submodules: recursive
     - name: Setup .NET Core
       uses: actions/setup-dotnet@v5
       with:
         dotnet-version: 10.0.*
     - name: Install Dependencies
       run: dotnet restore
-    - name: Build
+    - name: Build Library
+      run: dotnet build OrchardCoreContrib.Library --configuration Release
+    - name: Build App
       run: dotnet build --configuration Release --no-restore
-    - name: Test
+    - name: Test App
       run: dotnet test --no-restore --verbosity normal
