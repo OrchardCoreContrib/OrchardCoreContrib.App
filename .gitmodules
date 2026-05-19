@@ -1,0 +1,3 @@
+[submodule "OrchardCoreContrib.Library"]
+	path = OrchardCoreContrib.Library
+	url = https://github.com/OrchardCoreContrib/OrchardCoreContrib.Library.git
