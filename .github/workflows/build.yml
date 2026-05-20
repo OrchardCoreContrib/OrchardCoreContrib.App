@@ -14,7 +14,8 @@ jobs:
     - name: Checkout repository
       uses: actions/checkout@v6
       with:
-        submodules: recursive
+        submodules: true
+        token: ${{ secrets.OCC_TOKEN }}
     - name: Setup .NET Core
       uses: actions/setup-dotnet@v5
       with:
