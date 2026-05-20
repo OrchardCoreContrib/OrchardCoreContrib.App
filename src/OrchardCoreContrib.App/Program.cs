@@ -1,7 +1,7 @@
 ﻿using OrchardCoreContrib.Library;
 
-Console.WriteLine(Utils.Greet());
+Console.WriteLine(Utils.Greeting());
 
-Console.WriteLine(Utils.Greet("Jon"));
+Console.WriteLine(Utils.Greeting("Jon"));
 
-Console.WriteLine(Utils.Greet("Jon", "Doe"));
+Console.WriteLine(Utils.Greeting("Jon", "Doe"));
